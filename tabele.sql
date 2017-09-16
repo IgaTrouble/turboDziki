@@ -28,4 +28,12 @@ CREATE TABLE opiekunowie (
     foreign key (id_k) references klienci
 );
 #drop table opiekunowie
+INSERT INTO opiekunowie (id_k, id_p, nazwa) VALUES ('1', '11', 'Kon');
+INSERT INTO opiekunowie (id_k, id_p, nazwa) VALUES ('2', '21', 'Kaczka');
+INSERT INTO opiekunowie (id_k, id_p, nazwa) VALUES ('3', '31', 'Koza');
+INSERT INTO opiekunowie (id_k, id_p, nazwa) VALUES ('4', '41', 'Krowa');
+INSERT INTO opiekunowie (id_k, id_p, nazwa) VALUES ('5', '51', 'Alpaka');
+
+
+
 
