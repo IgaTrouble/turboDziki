@@ -18,9 +18,9 @@ CREATE TABLE opiekunowie (
     nazwa_o TEXT,
     PRIMARY KEY (id_o),
     FOREIGN KEY (id_k)
-        REFERENCES klienci,
+        REFERENCES klienci(id_k),
     FOREIGN KEY (id_p)
-        REFERENCES produkty
+        REFERENCES produkty(id_p)
 );
 #drop table opiekunowie
 
