@@ -6,17 +6,29 @@ CREATE TABLE klienci (
     id_k INT,
     nazwa TEXT,
     NIP TEXT,
-    primary key(id_k)
+    PRIMARY KEY (id_k)
 );
 
 #drop table klienci
 
 CREATE TABLE opiekunowie (
-    id_o INT auto_increment,
-    id_k int,
-    id_p int,
-    nazwa TEXT,
-    primary key(id_o),
-    foreign key (id_k) references klienci
+    id_o INT AUTO_INCREMENT,
+    id_k INT,
+    id_p INT,
+    nazwa_o TEXT,
+    PRIMARY KEY (id_o),
+    FOREIGN KEY (id_k)
+        REFERENCES klienci,
+    FOREIGN KEY (id_p)
+        REFERENCES produkty
 );
 #drop table opiekunowie
+
+
+CREATE TABLE produkty (
+    id_p INT AUTO_INCREMENT,
+    nazwa_p TEXT,
+    cena float,
+    PRIMARY KEY (id_p)
+);
+#drop table produkty
